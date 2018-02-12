@@ -1,0 +1,10 @@
+<h1>All Users</h1>
+
+<h2>Warning: For admins only</h2>
+
+<% @users.each do |user| %>
+
+  <p><%= user.email %></p>
+  <p><%= user.first_name %> <%= user.last_name %></p>
+
+<% end %>

@@ -1,0 +1,20 @@
+<header>
+  <div>
+    <%= link_to "Gogo Club", root_path %>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Users", users_path %></li>
+        <% else %>
+          <li><%= link_to "Signup", signup_path %></li>
+        <% end %>
+        <% if logged_in? %>
+          <li>You're logged in</li>
+        <% else %>
+          <li><%= link_to "Login", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
